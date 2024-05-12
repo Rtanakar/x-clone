@@ -26,7 +26,7 @@ export default function Post({ post, id }) {
           <img src={post?.image} className="rounded-2xl mr-2" />
           {/* <img src={post?.image} className="rounded-2xl mr-2 w-96 h-52 object-cover" /> */}
         </Link>
-        <Icons />
+        <Icons id={id} />
       </div>
     </div>
   );
