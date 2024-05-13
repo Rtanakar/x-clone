@@ -23,8 +23,12 @@ export default function Post({ post, id }) {
           <p className="text-gray-800 text-sm my-3">{post?.text}</p>
         </Link>
         <Link href={`/posts/${id}`}>
-          <img src={post?.image} className="rounded-2xl mr-2" />
-          {/* <img src={post?.image} className="rounded-2xl mr-2 w-96 h-52 object-cover" /> */}
+          <img
+            src={post?.image}
+            className={`rounded-2xl mr-2 ${
+              post?.image && "w-[40rem] h-60"
+            } object-cover`}
+          />
         </Link>
         <Icons id={id} uid={post.uid} />
       </div>
