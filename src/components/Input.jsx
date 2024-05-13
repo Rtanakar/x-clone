@@ -16,6 +16,7 @@ import {
   getFirestore,
   serverTimestamp,
 } from "firebase/firestore";
+import Image from "next/image";
 
 export default function Input() {
   const { data: session } = useSession();
@@ -92,7 +93,7 @@ export default function Input() {
   if (!session) return null;
   return (
     <div className="flex border-b border-gray-200 p-3 space-x-3 w-full">
-      <img
+      <Image
         className="w-11 h-11 rounded-full cursor-pointer hover:brightness-95"
         src={session.user.image}
         alt="user-img"
@@ -108,7 +109,7 @@ export default function Input() {
         ></textarea>
 
         {selectedFile && (
-          <img
+          <Image
             src={imageFileUrl}
             alt="image"
             className={`w-full max-h-[250px] object-cover cursor-pointer ${

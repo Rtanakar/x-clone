@@ -15,6 +15,7 @@ import {
 } from "firebase/firestore";
 import { app } from "@/firebase";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 const { useSession } = require("next-auth/react");
 
 export default function CommentModal() {
@@ -76,7 +77,7 @@ export default function CommentModal() {
             </div>
             <div className="p-2 flex items-center space-x-1 relative">
               <span className="w-0.5 h-full z-[-1] absolute left-8 top-11 bg-gray-300" />
-              <img
+              <Image
                 className="w-11 h-11 rounded-full mr-4"
                 src={post?.profileImg}
                 alt="user-img"
@@ -92,7 +93,7 @@ export default function CommentModal() {
               {post?.text}
             </p>
             <div className="flex p-3 space-x-3">
-              <img
+              <Image
                 src={session.user.image}
                 alt="user-img"
                 className="h-11 w-11 rounded-full cursor-pointer hover:brightness-95"

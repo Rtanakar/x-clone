@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function News() {
@@ -27,7 +28,7 @@ export default function News() {
                   {article.source.name}
                 </p>
               </div>
-              <img
+              <Image
                 src={article.urlToImage}
                 width={70}
                 className="rounded-xl"

@@ -11,6 +11,7 @@ import {
   setDoc,
 } from "firebase/firestore";
 import { signIn, useSession } from "next-auth/react";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { HiDotsHorizontal, HiHeart, HiOutlineHeart } from "react-icons/hi";
 
@@ -73,7 +74,7 @@ export default function Comment({ comment, commentId, originalPostId }) {
 
   return (
     <div className="flex p-3 border-b border-gray-200 hover:bg-gray-50 pl-10">
-      <img
+      <Image
         src={comment?.userImg}
         alt="user-img"
         className="w-9 h-9 rounded-full mr-4"
