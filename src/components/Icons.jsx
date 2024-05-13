@@ -29,6 +29,7 @@ export default function Icons({ id, uid }) {
   const [postId, setPostId] = useRecoilState(postIdState); // 2
   const [comments, setComments] = useState([]); //
   const db = getFirestore(app);
+
   const likePost = async () => {
     if (session) {
       if (isLiked) {
